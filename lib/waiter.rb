@@ -27,7 +27,7 @@ class Waiter
         tipper_string = nil
         x = 0
 
-        meals.detect do |meal|
+        meals.select do |meal|
             if meal.waiter == self
                if meal.tip > x
                     x = meal.tip 
