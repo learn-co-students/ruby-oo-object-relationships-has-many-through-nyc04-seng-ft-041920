@@ -2,10 +2,10 @@
 
 ## Objectives
 
-* Understand Has-Many-Through relationships
-* Construct indirect relationships between models (Customers, Waiters, and Meals)
-* Explore the concept of a 'joining' model
-* Continue to write code using a Single Source of Truth
+- Understand Has-Many-Through relationships
+- Construct indirect relationships between models (Customers, Waiters, and Meals)
+- Explore the concept of a 'joining' model
+- Continue to write code using a Single Source of Truth
 
 ## Introduction
 
@@ -27,11 +27,11 @@ refer to this is that each customer _has many_ pilots _through_ tickets.
 
 Check out some more examples:
 
-* A company that offers a network of doctors to their employees _through_ the
+- A company that offers a network of doctors to their employees _through_ the
   company's insurance program
-* A user on a popular media sharing site can have many "likes", that occur
+- A user on a popular media sharing site can have many "likes", that occur
   _through_ the pictures they post
-* A Lyft driver that you are connected to _through_ the rides you've taken with
+- A Lyft driver that you are connected to _through_ the rides you've taken with
   them
 
 In this lesson, we'll build out just such a relationship using waiters,
@@ -41,9 +41,9 @@ _through_ meals.
 
 ## Building Out Our Classes
 
-Let's start by building out the `Customer` class and `Waiter` class.  We want to
+Let's start by building out the `Customer` class and `Waiter` class. We want to
 make sure when building out classes, that there's something to store each
-instance.  That is to say: the `Customer` class should know about every
+instance. That is to say: the `Customer` class should know about every
 `customer` instance that gets created.
 
 ```ruby
@@ -254,7 +254,7 @@ same waiter. However, running `rachel.meals` only returns the meal `rachel` is
 associated with.
 
 So `rachel.meals` will return an array of all of Rachel's meals, but what if we now
-want a list of all of the waiters that Rachel has interacted with?  Each meal is
+want a list of all of the waiters that Rachel has interacted with? Each meal is
 also associated with a waiter, so to get every waiter from every meal Rachel has
 had, we need to take the array of all of Rachel's meals, map over it, getting the
 waiter from each of those meals.
@@ -282,7 +282,7 @@ terrance.new_meal(jason, 50, 6)
 terrance.new_meal(andrew, 60, 8)
 terrance.new_meal(yomi, 30, 4)
 
-terrance.waiters #=> [#<Waiter:0x00007fa23f18f860 @name="Jason", @yrs_experience=34>, #<Waiter:0x00007fa23f196818 @name="Andrew", @yrs_experience=27>, #<Waiter:0x00007fa23f19dd20 @name="Yomi", @yrs_experience=20>] 
+terrance.waiters #=> [#<Waiter:0x00007fa23f18f860 @name="Jason", @yrs_experience=34>, #<Waiter:0x00007fa23f196818 @name="Andrew", @yrs_experience=27>, #<Waiter:0x00007fa23f19dd20 @name="Yomi", @yrs_experience=20>]
 terrance.waiters.length #=> 3
 ```
 
@@ -363,9 +363,9 @@ methods. Think about expanding on the `Customer` and `Waiter` classes and about
 what other methods might be possible using the has-many-through relationship.
 For starters, try some of the following:
 
-* A waiter's most frequent customer
-* The meal of a waiter's worst tipping customer
-* The average tips for the most experienced waiter and the average tips for the
+- A waiter's most frequent customer
+- The meal of a waiter's worst tipping customer
+- The average tips for the most experienced waiter and the average tips for the
   least experienced waiter
 
 ```ruby
